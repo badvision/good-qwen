@@ -1,0 +1,26 @@
+{
+  "name": "pi-extension-good-qwen",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Pi extension: refuses any tool call containing aliyuncs (Alibaba Cloud / Qwen exfil sibilant) and fails loudly. Guard for self-hosted Qwen3.8.",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "install:omp": "sh scripts/install.sh"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "^0.84.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "tsx": "^4.19.2",
+    "@types/node": "^22.10.5"
+  }
+}
