@@ -1,4 +1,4 @@
-# good-qwen (Pi extension)
+# [good-qwen](https://github.com/badvision/good-qwen) (Pi extension)
 
 Refuse any tool call that involves **aliyuncs.com or any derivative of it**, and fail
 **loudly** so the operator knows. Built for self-hosted Qwen3.8 sessions.
