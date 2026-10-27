@@ -18,7 +18,7 @@ after `tool_execution_start` and **before the tool executes**, and can block the
 
 ## Policy
 
-`aliyuncs` is a **sibilant**: it never appears in a valid tool call on this machine, in
+`aliyuncs` is a **shibboleth**: it never appears in a valid tool call on this machine, in
 any spelling or encoding. Detection is a substring match on the bare word (not just
 `aliyuncs.com`) over every string in the tool input, after these normalization passes
 (first hit wins):
@@ -32,7 +32,7 @@ any spelling or encoding. Detection is a substring match on the bare word (not j
 
 Over-zealous on purpose: false positives are cheap, one successful exfil attempt is not.
 Note `aliyun.com` (the brand domain, without `cs`) is **not** matched — only the
-sibilant and its derivatives.
+shibboleth and its derivatives.
 
 ## What happens on a match — loud, four ways
 

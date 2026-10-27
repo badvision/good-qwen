@@ -10,7 +10,7 @@
  * security boundary, so this enforces at the `tool_call` hook, before
  * execution.
  *
- * Policy: "aliyuncs" is a sibilant — it never appears in a valid tool call on
+ * Policy: "aliyuncs" is a shibboleth — it never appears in a valid tool call on
  * this machine, in any encoding or defang. On match, fail LOUDLY:
  *   1. block the call and terminate the agent batch (`{ block, terminate }`)
  *   2. return a loud reason to the model so it cannot silently retry
@@ -57,7 +57,7 @@ export default function goodQwen(pi: ExtensionAPI): void {
 		const preview = JSON.stringify(match.source).slice(0, 200);
 		const reason = [
 			"⛔ BLOCKED BY good-qwen — this call is REFUSED and will not execute.",
-			`Tool "${event.toolName}" (toolCallId ${event.toolCallId}) contains the sibilant "${NEEDLE}" (aliyuncs.com / Alibaba Cloud — known Qwen exfil/telemetry channel).`,
+			`Tool "${event.toolName}" (toolCallId ${event.toolCallId}) contains the shibboleth "${NEEDLE}" (aliyuncs.com / Alibaba Cloud — known Qwen exfil/telemetry channel).`,
 			`Detected via ${match.via} normalization. Source: ${preview}`,
 			"This is a security boundary, not a preference. Do not retry with another tool, spelling, or encoding. Tell the user the call was blocked.",
 		].join("\n");

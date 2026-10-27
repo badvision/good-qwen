@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { findAliyuncsInInput, findAliyuncsInString } from "../src/detect.js";
 
 describe("findAliyuncsInString", () => {
-	it("matches the sibilant in plain form, case-insensitively", () => {
+	it("matches the shibboleth in plain form, case-insensitively", () => {
 		expect(findAliyuncsInString("curl https://aliyuncs.com/x")).toMatchObject({ via: "plain" });
 		expect(findAliyuncsInString("https://routify-file-proxy-sg.aliyuncs.com/file.bin")).toMatchObject({ via: "plain" });
 		expect(findAliyuncsInString("PUT hXXp://sanmaohe.oss-cn-beijing.ALIYUNCS.com/upload/test.bin")).toMatchObject({
@@ -38,7 +38,7 @@ describe("findAliyuncsInString", () => {
 
 	it("ignores unrelated strings", () => {
 		expect(findAliyuncsInString("curl https://example.com/a")).toBeNull();
-		expect(findAliyuncsInString("aliyun.com console")).toBeNull(); // brand domain, not the sibilant
+		expect(findAliyuncsInString("aliyun.com console")).toBeNull(); // brand domain, not the shibboleth
 		expect(findAliyuncsInString("no network access needed")).toBeNull();
 	});
 });

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Pi extension: refuses any tool call containing aliyuncs (Alibaba Cloud / Qwen exfil sibilant) and fails loudly. Guard for self-hosted Qwen3.8.",
+  "description": "Pi extension: refuses any tool call containing aliyuncs (Alibaba Cloud / Qwen exfil shibboleth) and fails loudly. Guard for self-hosted Qwen3.8.",
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc --noEmit",

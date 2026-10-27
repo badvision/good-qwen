@@ -8,7 +8,7 @@
  *
  * Policy (owner decision): the string "aliyuncs" in ANY form is a sign that
  * something is wrong. It never occurs in a valid tool call on this machine,
- * so a plain substring match on the sibilant itself — after normalization —
+ * so a plain substring match on the shibboleth itself — after normalization —
  * is the check. Deliberately over-zealous: false positives are cheap, a
  * successful exfil attempt is not.
  *
@@ -88,7 +88,7 @@ function* walkStrings(value: unknown, depth = 0): Generator<string> {
 	}
 }
 
-/** Check a whole tool input (any tool, any shape) for the sibilant. */
+/** Check a whole tool input (any tool, any shape) for the shibboleth. */
 export function findAliyuncsInInput(input: unknown): AliyuncsMatch | null {
 	for (const s of walkStrings(input)) {
 		const m = findAliyuncsInString(s);
